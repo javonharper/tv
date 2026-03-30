@@ -1,6 +1,7 @@
 use yew::prelude::*;
 mod core;
 mod entities;
+mod store;
 
 #[component]
 fn App() -> Html {
@@ -13,7 +14,7 @@ fn App() -> Html {
         <>
         <h1>{ "Harper TV · Sunday March 29 · 6:37pm" }</h1>
         <div >
-            for (channel, schedule, now_playing) in channel_schedules {
+            for (channel, _schedule, now_playing) in channel_schedules {
                 // let now_playing = core.get_now_playing(&schedule);
                 // XXX: Are these clones necessary?
                 // TODO: Move styling to CSS file at some point
