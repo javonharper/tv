@@ -1,3 +1,4 @@
+#[derive(Debug, Clone)]
 pub struct Channel {
     pub name: String,
     pub description: String,
@@ -11,17 +12,23 @@ impl Channel {
         }
     }
 }
-
+#[derive(Debug, Clone)]
+pub struct Program {
+    pub title: String,
+    pub description: String,
+    pub start_time: String,
+    pub end_time: String,
+    pub runtime: String,
+}
+#[derive(Debug, Clone)]
 pub struct ChannelSchedule {
-    // name: String,
-    // description: String,
+    pub programming: Vec<Program>,
 }
 
 impl ChannelSchedule {
     pub fn new() -> Self {
         Self {
-            // name: name.to_string(),
-            // description: description.to_string(),
+            programming: Vec::new(),
         }
     }
 }

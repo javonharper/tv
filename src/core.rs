@@ -1,4 +1,4 @@
-use crate::entities::Channel;
+use crate::entities::{Channel, ChannelSchedule, Program};
 
 pub struct Core {
     channels: Vec<Channel>,
@@ -57,10 +57,46 @@ impl Core {
         Self { channels }
     }
 
-    pub fn get_channel_schedules(&self, _date: &str) -> Vec<String> {
+    pub fn get_channel_schedules(
+        &self,
+        _date: &str,
+        // XXX: String error :thumbsdown:
+    ) -> Vec<(&Channel, ChannelSchedule, Result<Program, String>)> {
         self.channels
             .iter()
-            .map(|channel| channel.name.clone())
+            .map(|channel| {
+                let schedule = self.build_channel_schedule(channel);
+                let now_playing = self.get_now_playing(&schedule);
+                (channel, schedule, now_playing)
+            })
             .collect()
+    }
+
+    pub fn build_channel_schedule(&self, _channel: &Channel) -> ChannelSchedule {
+        let mut schedule = ChannelSchedule::new();
+
+        let program = crate::entities::Program {
+            title: "In Too Deeppppp".to_string(),
+            description: "A cop goes undercover to infiltrate a drug operation, but finds himself in over his head.".to_string(),
+            start_time: "12:00am".to_string(),
+            end_time: "11:59pm".to_string(),
+            runtime: "2h 0m".to_string(),
+        };
+
+        schedule.programming.push(program);
+
+        schedule
+    }
+
+    pub fn get_now_playing(&self, _schedule: &ChannelSchedule) -> Result<Program, String> {
+        let program = crate::entities::Program {
+            title: "In Too DELETE MEEEEE".to_string(),
+            description: "A cop goes undercover to infiltrate a drug operation, but finds himself in over his head.".to_string(),
+            start_time: "12:00am".to_string(),
+            end_time: "11:59pm".to_string(),
+            runtime: "2h 0m".to_string(),
+        };
+
+        Ok(program)
     }
 }
