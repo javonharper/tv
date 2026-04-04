@@ -20,8 +20,16 @@ async fn handler() -> Markup {
     let date = now.strftime("%A %B %e");
     let time = now.strftime("%-I:%M%P");
 
+    let channels = vec!["Channel 1", "Channel 2", "Channel 3"];
+
     let markup = html! {
         p { (name) " · " (date) " · " (time) }
+        div.grid {
+            @for channel in channels {
+                div { (channel) }
+                div { "Program 1" }
+            }
+         }
     };
 
     markup
