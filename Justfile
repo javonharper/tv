@@ -1,2 +1,2 @@
 dev:
-    trunk serve --open
+    RUST_BACKTRACE=1 trunk serve --open
