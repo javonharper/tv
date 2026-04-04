@@ -50,8 +50,13 @@ impl Core {
         while current_time < end_of_day {
             let program_duration = 120; // Each program is 2 hours long (120 minutes)
             let end_time = current_time + program_duration;
+            let films = self
+                .films
+                .iter()
+                .filter(|film| film.channel_keys.contains(&_channel.key))
+                .collect::<Vec<_>>();
 
-            let film = match self.films.choose(&mut rng) {
+            let film = match films.choose(&mut rng) {
                 Some(film) => film,
                 None => panic!("No films available to choose from."),
             };

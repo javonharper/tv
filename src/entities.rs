@@ -1,11 +1,13 @@
 #[derive(Debug, Clone)]
 pub struct Channel {
+    pub key: String,
     pub name: String,
 }
 
 impl Channel {
     pub fn new(name: &str) -> Self {
         Self {
+            key: name.to_lowercase().replace(" ", "_"),
             name: name.to_string(),
         }
     }
@@ -40,4 +42,5 @@ pub struct Program {
 #[derive(Debug, Clone)]
 pub struct Film {
     pub title: String,
+    pub channel_keys: Vec<String>,
 }
