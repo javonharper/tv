@@ -4,5 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-rand = "0.10.0"
-yew = { version = "0.23", features = ["csr"] }
+axum = "0.8.8"
+jiff = "0.2.23"
+tokio = { version = "1.51.0", features = ["full"] }

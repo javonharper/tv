@@ -1,26 +1,17 @@
-use yew::prelude::*;
-mod core;
-mod entities;
-mod store;
+// let heading = "Harper TV · Sunday March 29 · 6:37pm";
+use axum::{Router, response::Html, routing::get};
 
-#[component]
-fn App() -> Html {
-    // let _core = core::Core::new();
+#[tokio::main]
+async fn main() {
+    let app = Router::new().route("/", get(handler));
 
-    let heading = "Harper TV · Sunday March 29 · 6:37pm";
-
-    // info!("Rending app for date: {}", heading);
-
-    // let _date = "2026-03-29";
-    // let channel_schedules = core.get_channel_schedules(date);
-
-    html! {
-
-            <h1>{ heading }</h1>
-
-    }
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .unwrap();
+    println!("listening on http://{}", listener.local_addr().unwrap());
+    let _ = axum::serve(listener, app).await;
 }
 
-fn main() {
-    yew::Renderer::<App>::new().render();
+async fn handler() -> Html<&'static str> {
+    Html("<p>Hello, World!</p>")
 }
