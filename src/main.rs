@@ -1,10 +1,19 @@
 use axum::{Router, routing::get};
 use jiff::{Unit, Zoned};
 use maud::{Markup, html};
+use tower_http::services::ServeDir;
+
+mod core;
+mod entities;
+mod store;
+
+use core::Core;
 
 #[tokio::main]
 async fn main() {
-    let app = Router::new().route("/", get(handler));
+    let app = Router::new()
+        .route("/", get(handler))
+        .fallback_service(ServeDir::new("static"));
 
     let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
         .await
@@ -21,17 +30,21 @@ async fn handler() -> Markup {
     let date_short = now.strftime("%b %e");
     let time = now.strftime("%-I:%M%P");
 
-    let channels = vec!["Channel 1", "Channel 2", "Channel 3"];
+    let core = Core::new();
+    let channel_schedules =
+        core.get_channel_schedules(now.strftime("%Y-%m-%d").to_string().as_str());
 
     let markup = html! {
         title { (name) " · " (date_short)}
-        link rel="stylesheet" href="/styles.css" {}
+        link rel="stylesheet" type="text/css" href="./styles.css" {}
 
         p { (name) " · " (date) " · " (time) }
         div.grid {
-            @for channel in channels {
-                div { (channel) }
-                div { "Program 1" }
+            @for channel_schedule in channel_schedules {
+                div.row {
+                    div { (channel_schedule.channel.name) }
+                    div { "Program 1" }
+                }
             }
          }
     };

@@ -16,6 +16,13 @@ pub struct ChannelSchedule {
     pub programming: Vec<Program>,
 }
 
+#[derive(Debug, Clone)]
+pub struct ChannelScheduleResponse {
+    pub now_playing: Option<Program>,
+    pub programming: Vec<Program>,
+    pub channel: Channel,
+}
+
 impl ChannelSchedule {
     pub fn new() -> Self {
         Self {
