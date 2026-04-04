@@ -1,3 +1,4 @@
+use jiff::Zoned;
 use rand::prelude::*;
 
 use crate::{
@@ -66,16 +67,17 @@ impl Core {
             current_time = end_time
         }
 
-        // schedule
-        ChannelSchedule::new()
+        schedule
     }
 
     /// Gets the currently playing program based on the current time and the channel schedule
     pub fn get_now_playing(&self, schedule: &ChannelSchedule) -> Result<Program, String> {
-        let current_time = 600; // Placeholder for current time in minutes since midnight (e.g., 6:00 AM)
+        let current_time = Zoned::now().hour() * 60 + Zoned::now().minute(); // Current time in minutes since midnight
 
         for program in &schedule.programming {
-            if current_time >= program.start_time && current_time <= program.end_time {
+            if i32::from(current_time) >= program.start_time
+                && i32::from(current_time) < program.end_time
+            {
                 return Ok(program.clone());
             }
         }
