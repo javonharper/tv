@@ -45,9 +45,16 @@ async fn handler() -> Markup {
                     div { (channel_schedule.channel.name) }
                     div {
                         @if let Some(now_playing) = channel_schedule.now_playing {
-                            div { "Now Playing: " (now_playing.title) }
+                        "Now Playing: " (now_playing.title)
                         } @else {
-                            div { "No program currently playing." }
+                            "No program currently playing."
+                        }
+                    }
+                    div {
+                        @if let Some(next_up) = channel_schedule.next_up {
+                            "Next: " (next_up.title)
+                        } @else {
+                            "No upcoming program."
                         }
                     }
                 }
