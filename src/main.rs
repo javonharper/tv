@@ -31,8 +31,8 @@ async fn handler() -> Markup {
     let time = now.strftime("%-I:%M%P");
 
     let core = Core::new();
-    let channel_schedules =
-        core.get_channel_schedules(now.strftime("%Y-%m-%d").to_string().as_str());
+    let today_seed = now.strftime("%Y-%m-%d").to_string();
+    let channel_schedules = core.get_channel_schedules(today_seed);
 
     let markup = html! {
         title { (name) " · " (date_short)}
@@ -43,7 +43,13 @@ async fn handler() -> Markup {
             @for channel_schedule in channel_schedules {
                 div.row {
                     div { (channel_schedule.channel.name) }
-                    div { "Program 1" }
+                    div {
+                        @if let Some(now_playing) = channel_schedule.now_playing {
+                            div { "Now Playing: " (now_playing.title) }
+                        } @else {
+                            div { "No program currently playing." }
+                        }
+                    }
                 }
             }
          }
