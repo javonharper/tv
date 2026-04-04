@@ -4,15 +4,6 @@ pub struct Channel {
     pub name: String,
 }
 
-impl Channel {
-    pub fn new(name: &str) -> Self {
-        Self {
-            key: name.to_lowercase().replace(" ", "_"),
-            name: name.to_string(),
-        }
-    }
-}
-
 #[derive(Debug, Clone)]
 pub struct ChannelSchedule {
     pub programming: Vec<Program>,

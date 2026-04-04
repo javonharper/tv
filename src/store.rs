@@ -1,61 +1,42 @@
 use crate::entities::{Channel, Film};
+use std::fs::File;
 
 pub fn all_films() -> Vec<Film> {
-    vec![
-        Film {
-            title: "Action Movie 1".to_string(),
-            channel_keys: vec!["action".to_string()],
-        },
-        Film {
-            title: "Comedy Movie 1".to_string(),
-            channel_keys: vec!["comedy".to_string()],
-        },
-        Film {
-            title: "Crime Movie 1".to_string(),
-            channel_keys: vec!["crime".to_string()],
-        },
-        Film {
-            title: "Drama Movie 1".to_string(),
-            channel_keys: vec!["drama".to_string()],
-        },
-        Film {
-            title: "Horror Movie 1".to_string(),
-            channel_keys: vec!["horror".to_string()],
-        },
-        Film {
-            title: "Romance Movie 1".to_string(),
-            channel_keys: vec!["romance".to_string()],
-        },
-        Film {
-            title: "Sci-Fi Movie 1".to_string(),
-            channel_keys: vec!["sci-fi".to_string()],
-        },
-        Film {
-            title: "Thriller Movie 1".to_string(),
-            channel_keys: vec!["thriller".to_string()],
-        },
-        Film {
-            title: "Westerns Movie 1".to_string(),
-            channel_keys: vec!["westerns".to_string()],
-        },
-        Film {
-            title: "Fantasy Movie 1".to_string(),
-            channel_keys: vec!["fantasy".to_string()],
-        },
-    ]
+    let file = File::open("films.csv").expect("Could not open films.csv");
+    let mut reader = csv::Reader::from_reader(file);
+
+    let mut films = Vec::new();
+    for result in reader.records() {
+        let record = result.expect("Error parsing CSV record");
+        let title = record.get(0).expect("Missing title column").to_string();
+        let channel_keys_str = record.get(1).expect("Missing channel_keys column");
+
+        let channel_keys: Vec<String> = channel_keys_str
+            .split('|')
+            .map(|s| s.trim().to_string())
+            .collect();
+
+        films.push(Film {
+            title,
+            channel_keys,
+        });
+    }
+
+    films
 }
 
 pub fn all_channels() -> Vec<Channel> {
-    vec![
-        Channel::new("Action"),
-        Channel::new("Comedy"), // Belly Laugh
-        Channel::new("Crime"),
-        Channel::new("Drama"),
-        Channel::new("Horror"),
-        Channel::new("Romance"), // That Feeling
-        Channel::new("Sci-Fi"),
-        Channel::new("Thriller"),
-        Channel::new("Westerns"),
-        Channel::new("Fantasy"),
-    ]
+    let file = File::open("channels.csv").expect("Could not open channels.csv");
+    let mut reader = csv::Reader::from_reader(file);
+
+    let mut channels = Vec::new();
+    for result in reader.records() {
+        let record = result.expect("Error parsing CSV record");
+        let key = record.get(0).expect("Missing key column").to_string();
+        let name = record.get(1).expect("Missing name column").to_string();
+
+        channels.push(Channel { key, name });
+    }
+
+    channels
 }
