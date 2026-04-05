@@ -28,11 +28,9 @@ impl Core {
             .map(|channel| {
                 let schedule = self.build_channel_schedule(date.clone(), channel);
                 let now_playing = self.get_now_playing(&schedule);
-                let next_up = self.get_next_program(&schedule);
                 ChannelScheduleResponse {
                     channel: channel.clone(),
                     now_playing: now_playing.ok(),
-                    next_up: next_up.ok(),
                 }
             })
             .collect()
@@ -59,6 +57,12 @@ impl Core {
                 .iter()
                 .filter(|film| film.collections.contains(&_channel.key))
                 .collect::<Vec<_>>();
+
+            if films.is_empty() {
+                // If no films are available for this channel, skip to the next time slot
+                current_time = end_time;
+                continue;
+            }
 
             let film = match films.choose(&mut rng) {
                 Some(film) => film,
@@ -94,30 +98,9 @@ impl Core {
         Err("No program is currently playing.".to_string())
     }
 
-    /// Gets the next program to play after a specific time (in minutes since midnight)
-    fn get_next_program_at(
-        &self,
-        schedule: &ChannelSchedule,
-        time_in_minutes: i32,
-    ) -> Result<Program, String> {
-        for program in &schedule.programming {
-            if program.start_time >= time_in_minutes {
-                return Ok(program.clone());
-            }
-        }
-
-        Err("No upcoming program.".to_string())
-    }
-
     /// Gets the currently playing program based on the current time and the channel schedule
     pub fn get_now_playing(&self, schedule: &ChannelSchedule) -> Result<Program, String> {
         let current_time = current_time_in_minutes();
         self.get_playing_at(schedule, current_time)
-    }
-
-    /// Gets the next program to play after the current program
-    pub fn get_next_program(&self, schedule: &ChannelSchedule) -> Result<Program, String> {
-        let current_time = current_time_in_minutes();
-        self.get_next_program_at(schedule, current_time)
     }
 }

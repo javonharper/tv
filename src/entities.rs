@@ -12,7 +12,6 @@ pub struct ChannelSchedule {
 #[derive(Debug, Clone)]
 pub struct ChannelScheduleResponse {
     pub now_playing: Option<Program>,
-    pub next_up: Option<Program>,
     pub channel: Channel,
 }
 

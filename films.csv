@@ -1,56 +1,74 @@
-title,collections
-Blade,action
-Bad Boys,action
-Black Panther,action
--,action
--,action
-Do The Right Thing,comedy
-Coming to America,comedy
-Sorry to Bother You,comedy
-Barbershop,comedy
--,comedy
-Belly,crime
-Set It Off,crime
-City of God,crime
-Paid in Full,crime
--,crime
-Uncorked,drama
-Malcolm X,drama
-Claudine,drama
-The Color Purple,drama
-The Spook Who Sat by the Door,drama
-All Dirt Roads Taste of Salt,drama
-A Thousand and One,drama
-Pariah,drama
-Sinners,horror
-Us,horror
-His House,horror
--,horror
--,horror
-The Photograph,romance
-Atlantics,romance
-"If Beale Street Could Talk ",romance
-Medicine for Melancholy,romance
-Rye Lane,romance
-They Cloned Tyrone,sci-fi
-Nope,sci-fi
-Book of Eli,"sci-fi,action"
--,sci-fi
--,sci-fi
-Queen and slim,thriller
-Creed,thriller
--,thriller
--,thriller
--,thriller
-Rosewood,westerns
-"Django Unchained ",westerns
-Blazing Saddles,westerns
-The Harder They Fall,westerns
-Thomasine & Bushrod,westerns
-Concrete Cowboy,westerns
-Buck and the Preacher,westerns
--,fantasy
--,fantasy
--,fantasy
--,fantasy
--,fantasy
+title,collections,enabled
+Blade,action,false
+Bad Boys,action,false
+Black Panther,action,false
+-,action,false
+-,action,false
+Do The Right Thing,comedy,false
+Coming to America,comedy,false
+Sorry to Bother You,comedy,true
+Barbershop,comedy,false
+-,comedy,false
+Belly,crime,true
+Set It Off,crime,true
+City of God,crime,true
+Paid in Full,crime,false
+Deep Cover,crime,true
+New Jack City,crime;action,false
+Uncorked,drama,true
+Saint Omer,drama,true
+Claudine,drama,true
+The Color Purple,drama,false
+The Spook Who Sat by the Door,drama,false
+All Dirt Roads Taste of Salt,drama,true
+Pariah,drama,true
+Sinners,horror,true
+Us,horror,true
+Bones,horror,true
+His House,horror,true
+Bad Hair,"horror,comedy",false
+The Blackening,"horror,comedy",false
+The Photograph,romance,true
+Def by Temptation,horror,true
+Atlantics,romance;diaspora,true
+"If Beale Street Could Talk ",romance,false
+Medicine for Melancholy,romance,false
+Rye Lane,romance,true
+They Cloned Tyrone,sci-fi,true
+Nope,sci-fi;horror,true
+Book of Eli,"sci-fi,action,fantasy",false
+Parallel,"sci-fi;drama",true
+See You Yesterday,sci-fi,false
+Queen & Slim,romance,true
+Creed,thriller,false
+To Sleep With Anger,drama,true
+Origin,drama,true
+Earth Mama,drama,true
+Rosewood,westerns,true
+"Django Unchained ",westerns,true
+Blazing Saddles,westerns,true
+The Harder They Fall,westerns;action,true
+Thomasine & Bushrod,westerns,true
+Concrete Cowboy,westerns,true
+Buck and the Preacher,westerns,true
+Ganja & Hess,fantasy,false
+Beasts of the Southern Wild,"teen",true
+Pumzi,"fantasy,sci-fi",false
+f movie 4,fantasy,false
+f movie 5,fantasy,false
+Suncoast,teen,true
+Bones and All,teen,true
+Crooklyn,teen,true
+Premature,teen;romance;drama,true
+Touki Bouki,diaspora,true
+Yeleen,diaspora,true
+Félicité,diaspora,true
+Flame,diaspora,true
+Black Girl,diaspora,true
+You Will Die at Twenty,diaspora,true
+Timbuktu,diaspora,true
+The Wind,diaspora,true
+On Becoming a Guinea Fowl,diaspora,true
+Lingui: The Sacred Bonds,diaspora,true
+Rafiki,diaspora,true
+Eve's Bayou,drama;teen,true

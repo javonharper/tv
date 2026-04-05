@@ -51,13 +51,13 @@ async fn handler() -> Markup {
                             "No program currently playing."
                         }
                     }
-                    div {
-                        @if let Some(next_up) = channel_schedule.next_up {
-                            "Next: " (next_up.title)
-                        } @else {
-                            "No upcoming program."
-                        }
-                    }
+                    // div {
+                    //     @if let Some(next_up) = channel_schedule.next_up {
+                    //         "Next: " (next_up.title)
+                    //     } @else {
+                    //         "No upcoming program."
+                    //     }
+                    // }
                 }
             }
          }

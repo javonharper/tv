@@ -1,11 +1,13 @@
-key,name
-action,Action
-comedy,Comedy
-crime,Crime
-drama,Drama
-horror,Horror
-romance,Romance
-sci-fi,Sci-Fi
-thriller,Thriller
-westerns,Westerns
-fantasy,Fantasy
+key,name,enabled
+action,Action,true
+comedy,Comedy,true
+crime,Crime,true
+drama,Drama,true
+horror,Horror,true
+romance,Romance,true
+sci-fi,Sci-Fi,true
+thriller,Thriller,false
+westerns,Westerns,true
+fantasy,Fantasy,false
+teen,Coming of Age,true
+diaspora,The Diaspora,true
