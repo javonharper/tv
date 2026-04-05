@@ -9,17 +9,14 @@ pub fn all_films() -> Vec<Film> {
     for result in reader.records() {
         let record = result.expect("Error parsing CSV record");
         let title = record.get(0).expect("Missing title column").to_string();
-        let channel_keys_str = record.get(1).expect("Missing channel_keys column");
+        let collections_str = record.get(1).expect("Missing collections column");
 
-        let channel_keys: Vec<String> = channel_keys_str
+        let collections: Vec<String> = collections_str
             .split('|')
             .map(|s| s.trim().to_string())
             .collect();
 
-        films.push(Film {
-            title,
-            channel_keys,
-        });
+        films.push(Film { title, collections });
     }
 
     films

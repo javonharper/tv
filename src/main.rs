@@ -6,6 +6,7 @@ use tower_http::services::ServeDir;
 mod core;
 mod entities;
 mod store;
+mod utils;
 
 use core::Core;
 

@@ -34,5 +34,5 @@ pub struct Program {
 #[derive(Debug, Clone)]
 pub struct Film {
     pub title: String,
-    pub channel_keys: Vec<String>,
+    pub collections: Vec<String>,
 }
