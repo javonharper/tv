@@ -16,9 +16,7 @@ async fn main() {
         .route("/", get(handler))
         .fallback_service(ServeDir::new("static"));
 
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
-        .await
-        .unwrap();
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
     println!("listening on http://{}", listener.local_addr().unwrap());
     let _ = axum::serve(listener, app).await;
 }
