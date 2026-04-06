@@ -27,18 +27,18 @@ Sinners,horror,true
 Us,horror,true
 Bones,horror,true
 His House,horror,true
-Bad Hair,"horror,comedy",false
-The Blackening,"horror,comedy",false
+Bad Hair,"horror;comedy",true
+The Blackening,"horror;comedy",false
 The Photograph,romance,true
 Def by Temptation,horror,true
-Atlantics,romance;diaspora,true
+Atlantics,romance;african,true
 "If Beale Street Could Talk ",romance,false
 Medicine for Melancholy,romance,false
 Rye Lane,romance,true
 They Cloned Tyrone,sci-fi,true
 Nope,sci-fi;horror,true
-Book of Eli,"sci-fi,action,fantasy",false
-Parallel,"sci-fi,drama",false
+Book of Eli,"sci-fi;action;fantasy",false
+Parallel,"sci-fi;drama",true
 See You Yesterday,sci-fi,false
 Queen & Slim,romance,true
 Creed,thriller,false
@@ -54,30 +54,30 @@ Concrete Cowboy,westerns,true
 Buck and the Preacher,westerns,true
 Ganja & Hess,fantasy,false
 Beasts of the Southern Wild,teen,false
-Pumzi,"fantasy,sci-fi",false
+Pumzi,"fantasy;sci-fi;african",false
 f movie 4,fantasy,false
 f movie 5,fantasy,false
 Suncoast,teen,true
 Bones and All,teen,true
 Crooklyn,teen,true
 Premature,teen;romance;drama,true
-Touki Bouki,diaspora,true
-Yeleen,diaspora,true
-Félicité,diaspora,true
-Flame,diaspora,true
-Black Girl,diaspora,true
-You Will Die at Twenty,diaspora,true
-Timbuktu,diaspora,true
-The Wind,diaspora,true
-On Becoming a Guinea Fowl,diaspora,true
-Lingui: The Sacred Bonds,diaspora,true
-Rafiki,diaspora,true
+Touki Bouki,african,true
+Yeleen,african,true
+Félicité,african,true
+Flame,african,true
+Black Girl,african,true
+You Will Die at Twenty,african,true
+Timbuktu,african,true
+The Wind,african,true
+On Becoming a Guinea Fowl,african,true
+Lingui: The Sacred Bonds,african,true
+Rafiki,african,true
 Eve's Bayou,drama;teen,true
 Loves Jones,romance,true
 The Perfect Find,romance,true
 Brown Sugar,romance,true
 Really Love,romance,true
 Sylvie's Love,romance,true
-Good Madam,diaspora,true
-Air conditioner,diaspora,true
+Good Madam,african,true
+Air conditioner,african,true
 Medicine for Melancholy,romance,true
