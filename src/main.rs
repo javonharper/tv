@@ -22,7 +22,7 @@ async fn main() {
 }
 
 async fn handler() -> Markup {
-    let name = "Harper's Film Guide";
+    let name = "Harper's Television";
 
     let now = Zoned::now().round(Unit::Second).unwrap();
     let date = now.strftime("%A %B %e");
