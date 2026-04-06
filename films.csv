@@ -19,9 +19,10 @@ Uncorked,drama,true
 Saint Omer,drama,true
 Claudine,drama,true
 The Color Purple,drama,false
-The Spook Who Sat by the Door,drama,false
+The Spook Who Sat by the Door,drama,true
 All Dirt Roads Taste of Salt,drama,true
 Pariah,drama,true
+Moonlight,drama;teen,
 Sinners,horror,true
 Us,horror,true
 Bones,horror,true
@@ -37,13 +38,13 @@ Rye Lane,romance,true
 They Cloned Tyrone,sci-fi,true
 Nope,sci-fi;horror,true
 Book of Eli,"sci-fi,action,fantasy",false
-Parallel,"sci-fi;drama",true
+Parallel,"sci-fi,drama",false
 See You Yesterday,sci-fi,false
 Queen & Slim,romance,true
 Creed,thriller,false
 To Sleep With Anger,drama,true
 Origin,drama,true
-Earth Mama,drama,true
+-,thriller,false
 Rosewood,westerns,true
 "Django Unchained ",westerns,true
 Blazing Saddles,westerns,true
@@ -52,7 +53,7 @@ Thomasine & Bushrod,westerns,true
 Concrete Cowboy,westerns,true
 Buck and the Preacher,westerns,true
 Ganja & Hess,fantasy,false
-Beasts of the Southern Wild,"teen",true
+Beasts of the Southern Wild,teen,false
 Pumzi,"fantasy,sci-fi",false
 f movie 4,fantasy,false
 f movie 5,fantasy,false
@@ -72,3 +73,11 @@ On Becoming a Guinea Fowl,diaspora,true
 Lingui: The Sacred Bonds,diaspora,true
 Rafiki,diaspora,true
 Eve's Bayou,drama;teen,true
+Loves Jones,romance,true
+The Perfect Find,romance,true
+Brown Sugar,romance,true
+Really Love,romance,true
+Sylvie's Love,romance,true
+Good Madam,diaspora,true
+Air conditioner,diaspora,true
+Medicine for Melancholy,romance,true
