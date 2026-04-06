@@ -22,7 +22,7 @@ async fn main() {
 }
 
 async fn handler() -> Markup {
-    let name = "Harper's Television";
+    let name = "Harper's Film Guide";
 
     let now = Zoned::now().round(Unit::Second).unwrap();
     let date = now.strftime("%A %B %e");
@@ -34,11 +34,10 @@ async fn handler() -> Markup {
     let channel_schedules = core.get_channel_schedules(today_seed);
 
     let markup = html! {
-        title { (name) " · " (date_short)}
-        link rel="stylesheet" type="text/css" href="./reset.css" {}
+        title { (name) " · " (date_short)}        meta name="viewport" content="width=device-width, initial-scale=1.0";        link rel="stylesheet" type="text/css" href="./reset.css" {}
         link rel="stylesheet" type="text/css" href="./styles.css" {}
 
-        p { (name) " · " (date) " · " (time) }
+        p.heading { (name) " · " (date) " · " (time) }
         div.grid {
             div.row.header {
                 div {  }

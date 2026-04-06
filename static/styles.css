@@ -1,10 +1,19 @@
+:root {
+  --font-size: 20px;
+}
+
 body {
-  font-size: 18px;
+  font-size: var(--font-size);
   margin: 8px;
 }
 
+.heading {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
 .grid {
-  margin-top: 32px;
+  font-size: 1rem;
 }
 
 .row.header {
@@ -14,7 +23,7 @@ body {
 
 .row {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 10rem 1fr;
   gap: 16px;
   margin-bottom: 0.5rem;
 }
