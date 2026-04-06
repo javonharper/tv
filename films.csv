@@ -1,89 +1,91 @@
-title,collections,enabled,year,country
-Blade,action,false,,
-Bad Boys,action,false,,
-Black Panther,action,false,,
--,action,false,,
--,action,false,,
-Do The Right Thing,comedy,false,,
-Coming to America,comedy,false,,
-Sorry to Bother You,comedy,true,,
-Barbershop,comedy,false,,
--,comedy,false,,
-Belly,crime,true,,
-Set It Off,crime,true,,
-City of God,crime,true,,
-Paid in Full,crime,false,,
-Deep Cover,crime,true,,
-New Jack City,crime;action,false,,
-Uncorked,drama,true,,
-Saint Omer,drama,true,,
-Claudine,drama,true,,
-The Color Purple,drama,false,,
-The Spook Who Sat by the Door,drama,true,,
-All Dirt Roads Taste of Salt,drama,true,,
-Pariah,drama,true,,
-Moonlight,drama;teen,true,,
-Sinners,horror,true,,
-Us,horror,true,,
-Bones,horror,true,,
-His House,horror,true,,
-Bad Hair,horror;comedy,true,,
-The Blackening,horror;comedy,false,,
-The Photograph,romance,true,,
-Def by Temptation,horror,true,,
-Atlantics,romance;african,true,2019,Senegal
-"If Beale Street Could Talk ",romance,false,,
-Medicine for Melancholy,romance,false,,
-Rye Lane,romance,true,,
-They Cloned Tyrone,sci-fi,true,,
-Nope,sci-fi;horror,true,,
-Book of Eli,sci-fi;action;fantasy,false,,
-Parallel,sci-fi;drama,true,,
-See You Yesterday,sci-fi,false,,
-Queen & Slim,romance,true,,
-Creed,thriller,false,,
-To Sleep With Anger,drama,true,,
-Origin,drama,true,,
--,thriller,false,,
-Rosewood,westerns,true,,
-"Django Unchained ",westerns,true,,
-Blazing Saddles,westerns,true,,
-The Harder They Fall,westerns;action,true,,
-Thomasine & Bushrod,westerns,true,,
-Concrete Cowboy,westerns,true,,
-Buck and the Preacher,westerns,true,,
-Ganja & Hess,fantasy,false,,
-Beasts of the Southern Wild,teen,false,,
-Pumzi,fantasy;sci-fi;african,false,2009,South Africa
-f movie 4,fantasy,false,,
-f movie 5,fantasy,false,,
-Suncoast,teen,true,,
-Bones and All,teen,true,,
-Crooklyn,teen,true,,
-Premature,teen;romance;drama,true,,
-Touki Bouki,african,true,1973,Senegal
-Yeleen,african,true,1987,Mali
-Félicité,african,true,2017,DRC
-Flame,african,true,1996,Zimbabwe
-Black Girl,african,true,1966,Senegal
-You Will Die at Twenty,african,true,2019,Sudan
-Timbuktu,african,true,2014,Mali
-The Wind,african,true,1982,Mali
-On Becoming a Guinea Fowl,african,true,2024,Zambia
-Lingui: The Sacred Bonds,african,true,2021,Chad
-Rafiki,african;romance,true,2018,Kenya
-Eve's Bayou,drama;teen,true,,
-Loves Jones,romance,true,,
-The Perfect Find,romance,true,,
-Brown Sugar,romance,true,,
-Really Love,romance,true,,
-Sylvie's Love,romance,true,,
-Good Madam,african;horror,true,2021,South Africa
-Air Conditioner,african,true,2020,Angola
-Medicine for Melancholy,romance,true,,
-Entergalactic,romance,true,2022
-Beyond the Lights,romance,true,2014
-Clockers,crime,true
-Devil in a Blue Dress,thriller,false
-Daughters of the Dust,drama,true
-Drylongso,drama;teen,true,1998
+title,collections,year,country,enabled
+Blade,action,,-,false
+Bad Boys,action,,-,false
+Black Panther,action,,-,false
+-,action,,-,false
+-,action,,-,false
+Do The Right Thing,comedy,,-,false
+Coming to America,comedy,,-,false
+Sorry to Bother You,comedy,,-,true
+Barbershop,comedy,,-,false
+-,comedy,,-,false
+Belly,crime,,-,true
+Set It Off,crime,,-,true
+City of God,crime,,-,true
+Paid in Full,crime,,-,false
+Deep Cover,crime,,-,true
+New Jack City,crime;action,,-,false
+Uncorked,drama,,-,true
+Saint Omer,drama,,-,true
+Claudine,drama,,-,true
+The Color Purple,drama,,-,false
+The Spook Who Sat by the Door,drama,,-,true
+All Dirt Roads Taste of Salt,drama,,-,true
+Pariah,drama,,-,true
+Moonlight,drama;teen,,-,true
+Sinners,horror,,-,true
+Us,horror,,-,true
+Bones,horror,,-,true
+His House,horror,,-,true
+Bad Hair,horror;comedy,,-,true
+The Blackening,horror;comedy,,-,false
+The Photograph,romance,,-,true
+Def by Temptation,horror,,-,true
+Atlantics,romance;african,2019,Senegal,true
+"If Beale Street Could Talk ",romance,,-,false
+Medicine for Melancholy,romance,,-,false
+Rye Lane,romance,,-,true
+They Cloned Tyrone,sci-fi,,-,true
+Nope,sci-fi;horror,,-,true
+Book of Eli,sci-fi;action;fantasy,,-,false
+Parallel,sci-fi;drama,,-,true
+See You Yesterday,sci-fi,,-,false
+Queen & Slim,romance,,-,true
+Creed,thriller,,-,true
+To Sleep With Anger,drama,,-,true
+Origin,drama,,-,true
+-,thriller,,-,false
+Rosewood,westerns,,-,true
+"Django Unchained ",westerns,,-,true
+Blazing Saddles,westerns,,-,true
+The Harder They Fall,westerns;action,,-,true
+Thomasine & Bushrod,westerns,,-,true
+Concrete Cowboy,westerns,,-,true
+Buck and the Preacher,westerns,,-,true
+Ganja & Hess,fantasy,,-,false
+Beasts of the Southern Wild,teen,,-,false
+Pumzi,fantasy;sci-fi;african,2009,South Africa,false
+f movie 4,fantasy,,-,false
+f movie 5,fantasy,,-,false
+Suncoast,teen,,-,true
+Bones and All,teen,,-,true
+Crooklyn,teen,,-,true
+Premature,teen;romance;drama,,-,true
+Touki Bouki,african,1973,Senegal,true
+Yeleen,african,1987,Mali,true
+Félicité,african,2017,DRC,true
+Flame,african,1996,Zimbabwe,true
+Black Girl,african,1966,Senegal,true
+You Will Die at Twenty,african,2019,Sudan,true
+Timbuktu,african,2014,Mali,true
+The Wind,african,1982,Mali,true
+On Becoming a Guinea Fowl,african,2024,Zambia,true
+Lingui: The Sacred Bonds,african,2021,Chad,true
+Rafiki,african;romance,2018,Kenya,true
+Eve's Bayou,drama;teen,,-,true
+Loves Jones,romance,,-,true
+The Perfect Find,romance,,-,true
+Brown Sugar,romance,,-,true
+Really Love,romance,,-,true
+Sylvie's Love,romance,,-,true
+Good Madam,african;horror,2021,South Africa,true
+Air Conditioner,african,2020,Angola,true
+Medicine for Melancholy,romance,,-,true
+Entergalactic,romance,2022,-,true
+Beyond the Lights,romance,2014,-,true
+Clockers,crime,,-,true
+Devil in a Blue Dress,thriller,,-,true
+Daughters of the Dust,drama,,-,true
+Drylongso,drama;teen,1998,-,true
+Cradle 2 the Grave,action;crime,2003,-,true
+The Last Black Man in San Francisco,drama,2019,-,true
