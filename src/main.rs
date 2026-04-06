@@ -37,7 +37,37 @@ async fn handler() -> Markup {
         title { (name) " · " (date_short)}        meta name="viewport" content="width=device-width, initial-scale=1.0";        link rel="stylesheet" type="text/css" href="./reset.css" {}
         link rel="stylesheet" type="text/css" href="./styles.css" {}
 
-        p.heading { (name) " · " (date) " · " (time) }
+        p.heading {
+            (name) " · "
+            span #client-date { (date) }
+            " · "
+            span #client-time { (time) }
+        }
+        script {
+            r#"
+            function updateTime() {
+                const now = new Date();
+                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                
+                const dayName = days[now.getDay()];
+                const monthName = months[now.getMonth()];
+                const date = now.getDate();
+                
+                let hours = now.getHours();
+                const minutes = now.getMinutes();
+                const ampm = hours >= 12 ? 'pm' : 'am';
+                hours = hours % 12 || 12;
+                const minutesStr = minutes.toString().padStart(2, '0');
+                
+                document.getElementById('client-date').textContent = `${dayName} ${monthName} ${date}`;
+                document.getElementById('client-time').textContent = `${hours}:${minutesStr}${ampm}`;
+            }
+            
+            updateTime();
+            setInterval(updateTime, 1000);
+            "#
+        }
         div.grid {
             div.row.header {
                 div {  }
