@@ -35,6 +35,7 @@ async fn handler() -> Markup {
 
     let markup = html! {
         title { (name) " · " (date_short)}
+        link rel="stylesheet" type="text/css" href="./reset.css" {}
         link rel="stylesheet" type="text/css" href="./styles.css" {}
 
         p { (name) " · " (date) " · " (time) }
