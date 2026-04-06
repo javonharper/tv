@@ -12,6 +12,13 @@ pub fn all_films() -> Vec<Film> {
         let collections_str = record.get(1).expect("Missing collections column");
         let enabled_str = record.get(2).expect("Missing enabled column");
         let enabled = enabled_str.trim().eq_ignore_ascii_case("true");
+        let year = record
+            .get(3)
+            .expect("Missing year column")
+            .parse::<u32>()
+            .expect("Year must be a valid integer");
+
+        let country = record.get(4).map(|s| s.to_string());
 
         let collections: Vec<String> = collections_str
             .split(';')
@@ -19,7 +26,12 @@ pub fn all_films() -> Vec<Film> {
             .collect();
 
         if enabled {
-            films.push(Film { title, collections });
+            films.push(Film {
+                title,
+                collections,
+                year: None,
+                country: None,
+            });
         } else {
             println!("Skipping disabled film: {}", title);
         }

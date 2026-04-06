@@ -34,4 +34,6 @@ pub struct Program {
 pub struct Film {
     pub title: String,
     pub collections: Vec<String>,
+    pub year: Option<i32>,
+    pub country: Option<String>,
 }
