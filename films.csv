@@ -1,22 +1,22 @@
 title,collections,year,country,enabled
-Blade,action,,-,false
-Bad Boys,action,,-,false
-Black Panther,action,,-,false
--,action,,-,false
--,action,,-,false
-Do The Right Thing,comedy,,-,false
-Coming to America,comedy,,-,false
-Sorry to Bother You,comedy,,-,true
-Barbershop,comedy,,-,false
--,comedy,,-,false
-Belly,crime,,-,true
-Set It Off,crime,,-,true
-City of God,crime,,-,true
-Paid in Full,crime,,-,false
-Deep Cover,crime,,-,true
-New Jack City,crime;action,,-,false
-Uncorked,drama,,-,true
-Saint Omer,drama,,-,true
+Blade,action,,USA,false
+Bad Boys,action,,USA,false
+Black Panther,action,,USA,false
+-,action,,USA,false
+-,action,,USA,false
+Do The Right Thing,comedy,,USA,false
+Coming to America,comedy,,USA,false
+Sorry to Bother You,comedy,,USA,true
+Barbershop,comedy,,USA,false
+-,comedy,,USA,false
+Belly,crime,,USA,true
+Set It Off,crime,,USA,true
+City of God,crime,2002,Brazil,true
+Paid in Full,crime,,USA,false
+Deep Cover,crime,,USA,true
+New Jack City,crime;action,,USA,false
+Uncorked,drama,,USA,true
+Saint Omer,drama,2022,Senegal & France,true
 Claudine,drama,,-,true
 The Color Purple,drama,,-,false
 The Spook Who Sat by the Door,drama,,-,true
@@ -31,7 +31,7 @@ Bad Hair,horror;comedy,,-,true
 The Blackening,horror;comedy,,-,false
 The Photograph,romance,,-,true
 Def by Temptation,horror,,-,true
-Atlantics,romance;african,2019,Senegal,true
+Atlantics,romance;african;thriller,2019,Senegal,true
 "If Beale Street Could Talk ",romance,,-,false
 Medicine for Melancholy,romance,,-,false
 Rye Lane,romance,,-,true
@@ -53,10 +53,8 @@ Thomasine & Bushrod,westerns,,-,true
 Concrete Cowboy,westerns,,-,true
 Buck and the Preacher,westerns,,-,true
 Ganja & Hess,fantasy,,-,false
-Beasts of the Southern Wild,teen,,-,false
+Beasts of the Southern Wild,teen;drama,,-,false
 Pumzi,fantasy;sci-fi;african,2009,South Africa,false
-f movie 4,fantasy,,-,false
-f movie 5,fantasy,,-,false
 Suncoast,teen,,-,true
 Bones and All,teen,,-,true
 Crooklyn,teen,,-,true
@@ -89,3 +87,15 @@ Daughters of the Dust,drama,,-,true
 Drylongso,drama;teen,1998,-,true
 Cradle 2 the Grave,action;crime,2003,-,true
 The Last Black Man in San Francisco,drama,2019,-,true
+Nanny,thriller,2022,-,true
+"Our Father, The Devil",thriller,2021,Guinea & France,true
+She's Gotta Have It,romance;comedy,1986,USA,true
+The Inkwell,romance;drama,1994,USA,true
+The People Under The Stairs,horror,1991,USA,true
+Candyman,horror,2021,USA,true
+Candyman,horror,1992,USA,true
+A Different Image,women,-,-,false
+Will,women,-,-,false
+Losing Ground,women,-,,false
+Just Another Girl on the IRT,teen,-,-,true
+Romeo Must Die,action;thriller,-,-,true
