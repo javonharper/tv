@@ -63,7 +63,9 @@ async fn handler() -> Markup {
                                     (now_playing.title)
                                 }
                             } @else {
-                                (now_playing.title)
+                                span.movie-title data-title=(now_playing.title) {
+                                    (now_playing.title)
+                                }
                             }
                         } @else {
                             "No program currently playing."
