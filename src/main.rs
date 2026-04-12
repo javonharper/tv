@@ -12,6 +12,9 @@ use core::Core;
 
 #[tokio::main]
 async fn main() {
+    // Load environment variables from .env file
+    dotenvy::dotenv().ok();
+
     let app = Router::new()
         .route("/", get(handler))
         .fallback_service(ServeDir::new("static"));
@@ -55,7 +58,13 @@ async fn handler() -> Markup {
                     div { (channel_schedule.channel.name) }
                     div {
                         @if let Some(now_playing) = channel_schedule.now_playing {
-                        (now_playing.title)
+                            @if let Some(url) = utils::watch_url(&now_playing.title) {
+                                a href=(url) target="_blank" {
+                                    (now_playing.title)
+                                }
+                            } @else {
+                                (now_playing.title)
+                            }
                         } @else {
                             "No program currently playing."
                         }

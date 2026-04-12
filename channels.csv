@@ -1,13 +1,13 @@
 key,name,enabled
-action,Action,true
 drama,Drama,true
-teen,Coming of Age,true
 thriller,Thriller,true
+action,Action,true
 romance,Romance,true
-crime,Crime,true
+crime,Crime,false
 comedy,Comedy,true
 westerns,Westerns,true
 horror,Horror,true
 sci-fi,Sci-Fi,true
-fantasy,Fantasy,false
 african,African Cinema,true
+fantasy,Fantasy,false
+teen,Coming of Age,false

@@ -9,11 +9,11 @@ Coming to America,comedy,,USA,false
 Sorry to Bother You,comedy,,USA,true
 Barbershop,comedy,,USA,false
 -,comedy,,USA,false
-Belly,crime,,USA,true
-Set It Off,crime,,USA,true
-City of God,crime,2002,Brazil,true
-Paid in Full,crime,,USA,false
-Deep Cover,crime,,USA,true
+Belly,crime;thriller,,USA,true
+Set It Off,crime;thriller,,USA,true
+City of God,crime;thriller,2002,Brazil,true
+Paid in Full,crime;thriller,,USA,false
+Deep Cover,crime;thriller,,USA,true
 New Jack City,crime;action,,USA,false
 Uncorked,drama,,USA,true
 Saint Omer,drama,2022,Senegal & France,true
@@ -81,7 +81,7 @@ Air Conditioner,african,2020,Angola,true
 Medicine for Melancholy,romance,,-,true
 Entergalactic,romance,2022,-,true
 Beyond the Lights,romance,2014,-,true
-Clockers,crime,,-,true
+Clockers,crime;drama,,-,true
 Devil in a Blue Dress,thriller,,-,true
 Daughters of the Dust,drama,,-,true
 Drylongso,drama;teen,1998,-,true
