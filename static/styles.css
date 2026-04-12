@@ -1,10 +1,14 @@
 :root {
   --font-size: 20px;
+  --bg-color: #f6f1e7;
+  --fg-color: #1f1f13;
 }
 
 body {
   font-size: var(--font-size);
   margin: 8px;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
 }
 
 .heading {
