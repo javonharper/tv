@@ -1,3 +1,54 @@
+let currentSlot = null;
+
+function renderSchedule() {
+    if (typeof SCHEDULE === 'undefined') return;
+
+    const now = new Date();
+    const minutesSinceMidnight = now.getHours() * 60 + now.getMinutes();
+
+    const grid = document.getElementById('grid');
+    if (!grid) return;
+
+    grid.innerHTML = '<div class="row header"><div></div><div>Now Playing</div></div>';
+
+    for (const ch of SCHEDULE) {
+        const nowPlaying = ch.programs.find(
+            p => minutesSinceMidnight >= p.start && minutesSinceMidnight < p.end
+        );
+
+        const row = document.createElement('div');
+        row.className = 'row';
+
+        const nameCell = document.createElement('div');
+        nameCell.textContent = ch.channel;
+
+        const filmCell = document.createElement('div');
+        if (nowPlaying) {
+            if (nowPlaying.url) {
+                const a = document.createElement('a');
+                a.href = nowPlaying.url;
+                a.target = '_blank';
+                a.textContent = nowPlaying.title;
+                filmCell.appendChild(a);
+            } else {
+                const span = document.createElement('span');
+                span.className = 'movie-title';
+                span.dataset.title = nowPlaying.title;
+                span.textContent = nowPlaying.title;
+                filmCell.appendChild(span);
+            }
+        } else {
+            filmCell.textContent = 'No program currently playing.';
+        }
+
+        row.appendChild(nameCell);
+        row.appendChild(filmCell);
+        grid.appendChild(row);
+    }
+
+    activateWatchLinks();
+}
+
 function updateTime() {
     const now = new Date();
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -15,6 +66,13 @@ function updateTime() {
     
     document.getElementById('client-date').textContent = `${dayName} ${monthName} ${date}`;
     document.getElementById('client-time').textContent = `${hours}:${minutesStr}${ampm}`;
+
+    // Re-render schedule if the 2-hour slot has changed
+    const slot = Math.floor((now.getHours() * 60 + now.getMinutes()) / 120);
+    if (slot !== currentSlot) {
+        currentSlot = slot;
+        renderSchedule();
+    }
 }
 
 updateTime();

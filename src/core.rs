@@ -103,4 +103,15 @@ impl Core {
         let current_time = current_time_in_minutes();
         self.get_playing_at(schedule, current_time)
     }
+
+    /// Gets the full schedule (all programs) for every channel for a given date.
+    pub fn get_full_schedules(&self, date: String) -> Vec<(Channel, ChannelSchedule)> {
+        self.channels
+            .iter()
+            .map(|channel| {
+                let schedule = self.build_channel_schedule(date.clone(), channel);
+                (channel.clone(), schedule)
+            })
+            .collect()
+    }
 }
