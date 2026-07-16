@@ -1,7 +1,7 @@
 key,name,enabled
 drama,Drama,true
 thriller,Thriller,true
-action,Action,true
+action,Action,false
 romance,Romance,true
 crime,Crime,false
 comedy,Comedy,true
@@ -9,5 +9,6 @@ westerns,Westerns,true
 horror,Horror,true
 sci-fi,Sci-Fi,true
 african,African Cinema,true
+diaspora,Diaspora,false
 fantasy,Fantasy,false
 teen,Coming of Age,false
