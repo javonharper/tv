@@ -1,0 +1,33 @@
+:root {
+  --font-size: 20px;
+  --bg-color: #f6f1e7;
+  --fg-color: #1f1f13;
+}
+
+body {
+  font-size: var(--font-size);
+  margin: 8px;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+}
+
+.heading {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.grid {
+  font-size: 1rem;
+}
+
+.row.header {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 16px;
+  margin-bottom: 0.5rem;
+}
